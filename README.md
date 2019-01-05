@@ -1,4 +1,4 @@
-# DotNet-Core-CI-Sample-
+# DotNet Core CI Sample
 
 
 ## Continuous integration builds
