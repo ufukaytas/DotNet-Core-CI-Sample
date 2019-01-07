@@ -1,5 +1,10 @@
 # DotNet Core CI Sample
 
+## Code Coverage
+
+| Platform                    | Status                                                                                                                                  |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| Sonarcloud               | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ufukaytas_DotNet-Core-CI-Sample&metric=coverage)](https://sonarcloud.io/component_measures?id=ufukaytas_DotNet-Core-CI-Sample&metric=coverage)                           |
 
 ## Continuous integration builds
 
