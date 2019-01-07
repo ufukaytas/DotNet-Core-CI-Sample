@@ -9,7 +9,12 @@ before_script:
   - export PATH="$PATH:$HOME/.dotnet/tools"
 
 script:
-    - dotnet sonarscanner begin /k:"company:ufukaytas_DotNet-Core-CI-Sample" /n:"ufukaytas_DotNet-Core-CI-Sample" /v:"#.#.#" /o:"ufukaytas-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="11acda262af249d624019e5b90d62e4a9a18cefd" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml" || true
+    - dotnet sonarscanner begin /k:"ufukaytas_DotNet-Core-CI-Sample" /n:"ufukaytas_DotNet-Core-CI-Sample" /v:"1.0.0" /o:"ufukaytas-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="e78c314cb30918c69a6e18b2db032d622dc537fc" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml" || true
     - dotnet restore
     - dotnet build
-      - dotnet sonarscanner end /d:sonar.login="11acda262af249d624019e5b90d62e4a9a18cefd" || true
+      - dotnet sonarscanner end /d:sonar.login="e78c314cb30918c69a6e18b2db032d622dc537fc" || true
+cache:
+  directories:
+    - '$HOME/.nuget/packages'
+    - '$HOME/.local/share/NuGet/Cache'
+    - '$HOME/.sonar/cache'
